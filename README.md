@@ -19,7 +19,7 @@ The topic names are structured in 2 field names and the transmit and receive top
 
 # Build this Package
 ```
-"colcon build --packages-select ros2socketcan_bridge
+colcon build --packages-select ros2socketcan_bridge
 ```
 
 # Usage
