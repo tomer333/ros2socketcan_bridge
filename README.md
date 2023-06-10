@@ -17,11 +17,13 @@ are monitored and forwarded to the CAN bus. Examples for the topic names are:
 
 The topic names are structured in 2 field names and the transmit and receive topic. The first field name “CAN” identifies the topic within ROS 2 as a CAN Topic. The ‘CAN_bus_name’ identifies the CAN bus within a building block, because multiple CAN buses can be connected. A ROS 2 to CAN Bridge node is always coupled to one CAN bus. The name of the CAN Bus can be adjusted with a command line argument, e.g. “ros2can_bridge can1”.
 
-# Build
-Use "colcon build --packages-select ros2socketcan_bridge" to build this package.
+# Build this Package
+```
+"colcon build --packages-select ros2socketcan_bridge
+```
 
 # Usage
-The ros2can bridge is launched using the command: "ros2can_bridge". It will automatically start the CAN Bridge with the CAN socket "can0". To change the socket the CAN bridge add a command line argument, e.g. "ros2can_bridge can1".
+The ros2 CAN bridge is launched using the command: "ros2can_bridge". It will automatically start the CAN Bridge with the CAN socket "can0". To change the socket of the CAN bridge add a command line argument, e.g. "ros2can_bridge can1".
 
 # ROS2 Message Type
 The message type used for topics is the ROS2 "can_msgs/msg/Frame" message type.
