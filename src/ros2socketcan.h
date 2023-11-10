@@ -31,8 +31,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "can_msgs/msg/frame.hpp"
 
-#include "log.h"
-
 const std::string version = "1.01 from: " + std::string(__DATE__) + " " + std::string(__TIME__);
 const std::string programdescr = "ROS 2 to CAN-Bus Bridge\nVersion: " + version;
 
