@@ -1,6 +1,6 @@
 // Original Author: Philipp Wuestenberg <philipp.wuestenberg@tu-berlin.de>
-// Maintainer: Anthony Brogni <brogn002@umn.edu>
-// Last Updated: January 2023
+// Maintainer: Jonathan Blixti <blixt013@umn.edu>
+// Last Updated: November 2023
 
 // Import header file
 #include "ros2socketcan.h"
@@ -33,7 +33,7 @@ ros2socketcan::ros2socketcan() : Node("ros2socketcan"), stream(ios), signals(ios
 
     if (bind(natsock, (struct sockaddr *)&addr, sizeof(addr)) < 0)
     {
-        RCLCPP_ERROR(this->get_logger(),"Error in socket bind");
+        RCLCPP_ERROR(this->get_logger(), "Error in socket bind");
     }
 
     stream.assign(natsock);
