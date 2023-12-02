@@ -11,7 +11,7 @@ using std::placeholders::_3;
 
 ros2socketcan::ros2socketcan() : Node("ros2socketcan"), stream(ios), signals(ios, SIGINT, SIGTERM)
 {
-    this->declare_parameter("CAN_INTERFACE", "can1");
+    this->declare_parameter("CAN_INTERFACE", "can0");
     std::string can_socket = this->get_parameter("CAN_INTERFACE").as_string();
 
     RCLCPP_INFO(this->get_logger(), "CAN_INTERFACE: %s", can_socket.c_str());
