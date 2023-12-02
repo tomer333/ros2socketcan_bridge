@@ -23,7 +23,14 @@ colcon build --packages-select ros2socketcan_bridge
 ```
 
 # Usage
-The ros2 CAN bridge can be run using the command: "ros2 run ros2socketcan_bridge ros2socketcan". By default, it will start the CAN Bridge with the CAN socket "can0".
+The ros2 CAN bridge can be run using the command:
+```
+ros2 run ros2socketcan_bridge ros2socketcan
+```
+
+By default, it will start the CAN Bridge with the CAN socket "can0".
+
+<ins>Note:</ins> This ROS node is meant to be used on a Linux machine and may not work with other operating systems!
 
 # ROS2 Message Type
 The message type used for topics is the ROS2 "can_msgs/msg/Frame" message type.
