@@ -24,7 +24,7 @@ set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
 
 add_executable(ros2socketcan src/ros2socketcan.cpp)
 
-TARGET_LINK_LIBRARIES(ros2socketcan dl -lboost_system -pthread  -lcrypt -lm -lpthread)
+TARGET_LINK_LIBRARIES(ros2socketcan dl -pthread  -lcrypt -lm -lpthread)
 
 ament_target_dependencies(ros2socketcan rclcpp std_msgs can_msgs)
 
